@@ -5,48 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        a{
-            text-decoration: none;
-        }
-        header{ 
-            text-align: center;
-            width: 15%;
-            background-color: black;
-            color: azure;
-        }
-        header h1 a{
-            color: azure;
-            line-height: 100px;
-            display: block;
-        }
-        header nav ul{
-            list-style: none;
-        }
-        header nav ul li a{
-            color: azure;
-            line-height: 100px;
-            display: block;
-            border-top: solid 1px white;
-        }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    header{
+        background-color: black;
+        width: 400px;
+        text-align: center;
+    }
+    header h1 a{
+        line-height: 50px;
+        display: block;
+        color: aliceblue;
+        font-family: 'Nanum Myeongjo', serif;
+    }
+    header nav{
+    }
+    header nav .depth01{}
+    header nav >.depth01 > li{
+        position: relative;
+    }
+    header nav > .depth01 > li > a{
+        line-height: 50px;
+        color: aliceblue;
+        display: block;
+        border-top: solid 1px #fff;
+        font-family: 'Nanum Myeongjo', serif;
+    }
+    header nav .depth02{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 100%;
+        background-color: darkgrey;  
+        display: none;
+    }
+    header nav .depth02 li{
+    
+    }
+    header nav .depth02 li a{
+        line-height: 50px;
+        color: black;
+        display: block;
+        border-top: solid 1px #444;
+        font-family: 'Nanum Myeongjo', serif;
+    }
+    header .depth01 li:hover .depth02{
+        display: block;
+    }
+    
     </style>
 </head>
 <body>
-    
-    <header>
-        <h1><a href="#">메인로고</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">대메뉴1</a></li>
-                <li><a href="#">대메뉴2</a></li>
-                <li><a href="#">대메뉴3</a></li>
-                <li><a href="#">대메뉴4</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1><a href="#">메인로고</a></h1>
+    <nav>
+        <ul class="depth01">
+            <li>
+                <a href="#">대메뉴1</a>
+                <ul class="depth02">
+                    <li><a href="#">소메뉴1</a></li>
+                    <li><a href="#">소메뉴2</a></li>
+                    <li><a href="#">소메뉴3</a></li>
+                    <li><a href="#">소메뉴4</a></li>
+                    <li><a href="#">소메뉴5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴2</a>
+                <ul class="depth02">
+                    <li><a href="#">소메뉴1</a></li>
+                    <li><a href="#">소메뉴2</a></li>
+                    <li><a href="#">소메뉴3</a></li>
+                    <li><a href="#">소메뉴4</a></li>
+                    <li><a href="#">소메뉴5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴3</a>
+                <ul class="depth02">
+                    <li><a href="#">소메뉴1</a></li>
+                    <li><a href="#">소메뉴2</a></li>
+                    <li><a href="#">소메뉴3</a></li>
+                    <li><a href="#">소메뉴4</a></li>
+                    <li><a href="#">소메뉴5</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">대메뉴4</a>
+                <ul class="depth02">
+                    <li><a href="#">소메뉴1</a></li>
+                    <li><a href="#">소메뉴2</a></li>
+                    <li><a href="#">소메뉴3</a></li>
+                    <li><a href="#">소메뉴4</a></li>
+                    <li><a href="#">소메뉴5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
 </body>
 </html>
